@@ -2,7 +2,7 @@
   "pensamentos": [
     {
       "id": 1,
-      "conteudo": "We are the champions my friends!!!",
+      "conteudo": "We are the champions my friends!",
       "autoria": "Queen",
       "modelo": "modelo1"
     },
@@ -19,16 +19,10 @@
       "id": 4
     },
     {
-      "conteudo": "oi",
-      "autoria": "bia",
-      "modelo": "modelo2",
-      "id": 5
-    },
-    {
+      "id": 6,
       "conteudo": "oi sou dev front-end",
       "autoria": "dev ",
-      "modelo": "modelo3",
-      "id": 6
+      "modelo": "modelo3"
     }
   ]
 }
