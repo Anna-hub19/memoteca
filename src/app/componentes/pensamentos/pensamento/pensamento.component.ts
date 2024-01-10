@@ -12,7 +12,8 @@ export class PensamentoComponent implements OnInit {
     id: 0, // colocamos o valor 0 pois os dados reais do `id` virão do componente "pai".
     conteudo: 'I love Angular',
     autoria: 'Nay',
-    modelo: 'modelo3'
+    modelo: 'modelo3',
+    favorito:false
 }
 constructor() { }
 
@@ -24,6 +25,12 @@ larguraPensamento(): string {
     return 'pensamento-g'
   }
   return 'pensamento-p'
+}
+mudarIconeFavorito(): string{
+ if(this.pensamento.favorito == false){
+  return 'inativo'
+ }
+ return 'ativo'
 }
 
 }
