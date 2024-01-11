@@ -13,7 +13,7 @@ export class PensamentoService {
   constructor(private http: HttpClient) { }
 
   listar(pagina: number, filtro: string): Observable<Pensamento[]> {
-
+  
     const itensPorPagina = 6;
 
     let params = new HttpParams()
@@ -25,7 +25,6 @@ export class PensamentoService {
       }
     return this.http.get<Pensamento[]>(this.API, { params})
   }
-
   criar(pensamento: Pensamento): Observable<Pensamento> {
     return this.http.post<Pensamento>(this.API, pensamento)
   }
@@ -33,13 +32,11 @@ export class PensamentoService {
   editar(pensamento: Pensamento): Observable<Pensamento> {
     const url = `${this.API}/${pensamento.id}`
     return this.http.put<Pensamento>(url, pensamento )
-
   }
 
-  mudarPensamento(pensamento: Pensamento): Observable<Pensamento>{
+  mudarfavorito(pensamento: Pensamento): Observable<Pensamento>{
     pensamento.favorito = !pensamento.favorito
-    const url = `${this.API}/${pensamento.id}`
-    
+    return this.editar(pensamento)
   }
 
   excluir(id: number): Observable<Pensamento> {
